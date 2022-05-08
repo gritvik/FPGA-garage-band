@@ -1,0 +1,43 @@
+module I2S(	input data_in_line,
+				input word_clk,
+				input bit_clk,
+				output data_out_line);
+logic [31:0] reg;
+always_ff @(posedge word_clk or negedge word_clk) begin
+	reg = {0, };
+end
+	
+endmodule
+//din is connected to line-out (headphhone jack)
+//freq sample of 44.1kHz
+//samples are 8 to 32 bits
+//shifting 64*LRCLK
+//1 dummy bit, 8 bits sample, 23 zeros} shift register
+//
+//ld 8 bits from memory
+//shift 1 bit at a time @ posedge SCLK
+//every LR clk, ld again
+//
+//inputs: memory address
+//			lrclk
+//			sclk
+//output: i2sdin
+
+module shiftreg (input 	clk,
+								reset,
+);
+input in, clock,reset;
+output[0:31] out;
+reg [0:31] out_nxt;
+
+assign out = out_nxt;
+
+always@ (posedge clock)
+begin
+if (reset)
+out_nxt <= 32`b0;
+else
+out_nxt = {out_nxt, in};
+end
+
+endmodule

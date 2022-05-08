@@ -1,0 +1,42 @@
+module audio_manager(	input 	KEY,
+								input		lrclk 
+								output	[7:0] bits_8
+);
+
+endmodule
+
+enum [7:0] unsigned {off = 8'b0, 
+							S0  = audio_A*, 
+							S1  = audio_A*,
+							S2  = audio_A*, 
+							S3  = audio_A*,
+							S4  = audio_A*, 
+							S5  = audio_A*,
+							S6  = audio_A*,
+							S7  = audio_A*, 
+							} 
+							state, next_state;
+
+always_comb begin
+	if(KEY==1 && pause==0)
+		
+end
+
+
+module audiorom
+(
+		input logic [12:0] addr
+		output logic [7:0] data_Out
+);
+	// mem has width of 3 bits and a total of 400 addresses
+	logic [7:0] mem [5336];
+
+	initial begin
+		 $readmemh("snare_audio.txt", mem);
+	end
+
+	always begin
+		data_Out <= mem[addr];
+	end
+
+endmodule

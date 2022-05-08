@@ -1,0 +1,96 @@
+module sprite_control(	input logic [31:0] pattern,
+								input logic [9:0] DrawX, DrawY,
+								output logic [7:0]  Red, Green, Blue
+							);
+	logic [2:0] CellX, CellY;
+	logic [6:0] SpriteX, SpriteY;
+	logic [4:0] CellAddr;
+							
+	CellX = DrawX/80;
+	CellY = DrawY/60;
+	SpriteX = DrawX % 80;
+	SpriteY  = DrawY % 60;
+	CellAddr = (8*CellY) + CellX;
+	if(CellAddr>31) begin
+	
+	end
+	else (pattern[CellAddr]==1) begin
+		pix = sprite_rom[SpriteY][SpriteX];
+	end
+
+endmodule
+
+
+
+
+
+
+module sprite_rom(input addr, output data);
+
+
+endmodule
+
+logic [79:0] sprite_rom [60];
+initial begin
+	sprite_rom[0] = {{10'b0},{60{1'b1}},{10'b0}};
+	sprite_rom[1] = {{6'b0}, {68{1'b1}},{6'b0}};
+	sprite_rom[2] = {{4'b0},{72{1'b1}},{4'b0}};
+	sprite_rom[3] = {{3'b0},{74{1'b1}},{3'b0}};
+	sprite_rom[4] = {{2'b0},{76{1'b1}},{2'b0}};
+	sprite_rom[5] = {{2'b0},{76{1'b1}},{2'b0}};
+	sprite_rom[6] = {{1'b0},{78{1'b1}},{1'b0}};
+	sprite_rom[7] = {{1'b0},{78{1'b1}},{1'b0}};
+	sprite_rom[8] = {{1'b0},{78{1'b1}},{1'b0}};
+	sprite_rom[9] = {{1'b0},{78{1'b1}},{1'b0}};
+	sprite_rom[10] = {80{1'b1}};
+	sprite_rom[11] = {80{1'b1}};
+	sprite_rom[12] = {80{1'b1}};
+	sprite_rom[13] = {80{1'b1}};
+	sprite_rom[14] = {80{1'b1}};
+	sprite_rom[15] = {80{1'b1}};
+	sprite_rom[16] = {80{1'b1}};
+	sprite_rom[17] = {80{1'b1}};
+	sprite_rom[18] = {80{1'b1}};
+	sprite_rom[19] = {80{1'b1}};
+	sprite_rom[20] = {80{1'b1}};
+	sprite_rom[21] = {80{1'b1}};
+	sprite_rom[22] = {80{1'b1}};
+	sprite_rom[23] = {80{1'b1}};
+	sprite_rom[24] = {80{1'b1}};
+	sprite_rom[25] = {80{1'b1}};
+	sprite_rom[26] = {80{1'b1}};
+	sprite_rom[27] = {80{1'b1}};
+	sprite_rom[28] = {80{1'b1}};
+	sprite_rom[29] = {80{1'b1}};
+	sprite_rom[30] = {{1'b0},{78{1'b1}},{1'b0}};
+	sprite_rom[31] = {{1'b0},{78{1'b1}},{1'b0}};
+	sprite_rom[32] = {{1'b0},{78{1'b1}},{1'b0}};
+	sprite_rom[33] = {{1'b0},{78{1'b1}},{1'b0}};
+	sprite_rom[34] = {{2'b0},{76{1'b1}},{2'b0}};
+	sprite_rom[35] = {{2'b0},{76{1'b1}},{2'b0}};
+	sprite_rom[36] = {{3'b0},{74{1'b1}},{3'b0}};
+	sprite_rom[37] = {{4'b0},{72{1'b1}},{4'b0}};
+	sprite_rom[38] = {{6'b0}, {68{1'b1}},{6'b0}};
+	sprite_rom[39] = {{10'b0},{60{1'b1}},{10'b0}};
+	sprite_rom[40] = {80'b0};
+	sprite_rom[41] = {80'b0};
+	sprite_rom[42] = {80'b0};
+	sprite_rom[43] = {80'b0};
+	sprite_rom[44] = {80'b0};
+	sprite_rom[45] = {80'b0};
+	sprite_rom[46] = {80'b0};
+	sprite_rom[47] = {80'b0};
+	sprite_rom[48] = {80'b0};
+	sprite_rom[49] = {80'b0};
+	sprite_rom[50] = {80'b0};
+	sprite_rom[51] = {80'b0};
+	sprite_rom[52] = {80'b0};
+	sprite_rom[53] = {80'b0};
+	sprite_rom[54] = {80'b0};
+	sprite_rom[55] = {80'b0};
+	sprite_rom[56] = {80'b0};
+	sprite_rom[57] = {80'b0};
+	sprite_rom[58] = {80'b0};
+	sprite_rom[59] = {80'b0};
+	
+end

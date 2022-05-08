@@ -1,0 +1,148 @@
+Flow report for ece385_final
+Sat May 07 15:51:30 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Sat May 07 15:51:30 2022       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; ece385_final                                ;
+; Top-level Entity Name              ; final_control                               ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C7G                              ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 22,235 / 49,760 ( 45 % )                    ;
+;     Total combinational functions  ; 21,585 / 49,760 ( 43 % )                    ;
+;     Dedicated logic registers      ; 2,869 / 49,760 ( 6 % )                      ;
+; Total registers                    ; 2938                                        ;
+; Total pins                         ; 142 / 360 ( 39 % )                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 142,536 / 1,677,312 ( 8 % )                 ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/07/2022 15:43:52 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; ece385_final        ;
++-------------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                       ;
++-------------------------------------+-------------------------------------------------------------+---------------+-------------------+----------------+
+; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name       ; Section Id     ;
++-------------------------------------+-------------------------------------------------------------+---------------+-------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 132127258522269.165195623114556                             ; --            ; --                ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                           ; --            ; --                ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)                             ; <None>        ; --                ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                                        ; --            ; --                ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                          ; --            ; --                ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                           ; --            ; --                ; --             ;
+; MISC_FILE                           ; final_soc/synthesis/../final_soc.cmp                        ; --            ; --                ; --             ;
+; MISC_FILE                           ; final_soc/synthesis/../../final_soc.qsys                    ; --            ; --                ; --             ;
+; MISC_FILE                           ; Ram_bb.v                                                    ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                           ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                           ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                  ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                  ; --            ; --                ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                      ; --            ; DE10_LITE_Default ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                      ; --            ; final_control     ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                      ; --            ; DE10_LITE_Default ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                      ; --            ; final_control     ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                      ; --            ; DE10_LITE_Default ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                      ; --            ; final_control     ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                         ; --            ; --                ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                       ; --            ; --                ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                ; --            ; --                ; --             ;
+; SLD_FILE                            ; final_soc/synthesis/final_soc.regmap                        ; --            ; --                ; --             ;
+; SLD_FILE                            ; final_soc/synthesis/final_soc.debuginfo                     ; --            ; --                ; --             ;
+; SLD_INFO                            ; QSYS_NAME final_soc HAS_SOPCINFO 1 GENERATION_ID 1651685889 ; --            ; final_soc         ; --             ;
+; SOPCINFO_FILE                       ; final_soc/synthesis/../../final_soc.sopcinfo                ; --            ; --                ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --            ; --                ; --             ;
+; TOP_LEVEL_ENTITY                    ; final_control                                               ; ece385_final  ; --                ; --             ;
++-------------------------------------+-------------------------------------------------------------+---------------+-------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:05:20     ; 1.0                     ; 5153 MB             ; 00:05:54                           ;
+; Fitter               ; 00:01:33     ; 1.9                     ; 6949 MB             ; 00:04:17                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4739 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:16     ; 4.2                     ; 5277 MB             ; 00:00:47                           ;
+; EDA Netlist Writer   ; 00:00:08     ; 1.0                     ; 4972 MB             ; 00:00:09                           ;
+; Total                ; 00:07:23     ; --                      ; --                  ; 00:11:13                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; LAPTOP-F90UUCUU  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-F90UUCUU  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-F90UUCUU  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-F90UUCUU  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-F90UUCUU  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off ece385_final -c ece385_final
+quartus_fit --read_settings_files=off --write_settings_files=off ece385_final -c ece385_final
+quartus_asm --read_settings_files=off --write_settings_files=off ece385_final -c ece385_final
+quartus_sta ece385_final -c ece385_final
+quartus_eda --read_settings_files=off --write_settings_files=off ece385_final -c ece385_final
+
+
+
